@@ -33,6 +33,7 @@ function take_searchengine(ss){
 		'#b':'https://www.bing.com/search?setmkt=it-IT&q=%s',
 		'#gi':'http://www.google.com/search?q=%s&tbm=isch',
 		'#gl':'http://www.google.com/search?q=%s&hl=it',
+		'#yt':'http://www.youtube.com/results?search_query=%s',
 		'#i':'http://www.google.com/search?q=%s&tbm=isch'
 	};
 	ret=arr[ss];
