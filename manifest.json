@@ -11,6 +11,6 @@
 		"scripts":["bg.js"]
 	},
 	"icons":{ "256": "icon.png"},
-	"omnibox":{"keyword":"!"},
+	"omnibox":{"keyword":"#"},
 	"manifest_version": 2
 }

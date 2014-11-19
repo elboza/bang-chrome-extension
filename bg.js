@@ -1,24 +1,24 @@
-// Copyright (c) 2012 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
+// !bang background
 
 // This event is fired each time the user updates the text in the omnibox,
 // as long as the extension's keyword mode is still active.
-chrome.omnibox.onInputChanged.addListener(
-  function(text, suggest) {
-    console.log('inputChanged: ' + text);
-    suggest([
-      {content: text + " one", description: "the first one"},
-      {content: text + " number two", description: "the second entry"}
-    ]);
-  });
+//chrome.omnibox.onInputChanged.addListener(
+//  function(text, suggest) {
+//    console.log('inputChanged: ' + text);
+//    suggest([
+//      {content: text + " one", description: "the first one"},
+//      {content: text + " number two", description: "the second entry"}
+//    ]);
+//});
+
+var searchsigil='!';
 
 // This event is fired with the user accepts the input in the omnibox.
 chrome.omnibox.onInputEntered.addListener(
   function(text) {
   	var res=text.split(" ");
   	var searchengine=res.shift();
-  	if(searchengine.charAt(0)!='#') {res.unshift(searchengine);searchengine="null";}
+  	if(searchengine.charAt(0)!=searchsigil) {res.unshift(searchengine);searchengine="null";}
   	var stringquery=res.join("%20");
   	//alert(searchengine+' '+stringquery);
     //console.log('search engine: ' + searchengine+ ' string query: '+stringquery);
@@ -30,20 +30,36 @@ chrome.omnibox.onInputEntered.addListener(
   });
 function take_searchengine(ss){
 	var ret=undefined;
+	var localelang=window.navigator.language;
 	var arr={
-		'#g':'http://www.google.com/search?q=%s',
-		'#w':'http://www.amazon.com/exec/obidos/external-search/?field-keywords=%s&mode=blended',
-		'#b':'https://www.bing.com/search?setmkt=it-IT&q=%s',
-		'#gi':'http://www.google.com/search?q=%s&tbm=isch',
-		'#gl':'http://www.google.com/search?q=%s&hl=it',
-		'#yt':'http://www.youtube.com/results?search_query=%s',
-		'#f':'https://www.facebook.com/search/more/?q=%s',
-		'#t':'https://twitter.com/search?q=%s',
-		'#ebay': 'http://www.ebay.com/sch/i.html?_nkw=%s',
-		'#i':'http://www.google.com/search?q=%s&tbm=isch'
+		'g':'http://www.google.com/search?q=%s',
+		'a':'http://www.amazon.com/exec/obidos/external-search/?field-keywords=%s&mode=blended',
+		'ait':'http://www.amazon.it/exec/obidos/external-search/?field-keywords=%s&mode=blended',
+		'afr':'http://www.amazon.fr/exec/obidos/external-search/?field-keywords=%s&mode=blended',
+		'aes':'http://www.amazon.es/exec/obidos/external-search/?field-keywords=%s&mode=blended',
+		'auk':'http://www.amazon.co.uk/exec/obidos/external-search/?field-keywords=%s&mode=blended',
+		'b':'https://www.bing.com/search?setmkt='+localelang+'&q=%s',
+		'bit':'https://www.bing.com/search?setmkt=it-IT&q=%s',
+		'bfr':'https://www.bing.com/search?setmkt=fr-FR&q=%s',
+		'bes':'https://www.bing.com/search?setmkt=es-ES&q=%s',
+		'gi':'http://www.google.com/search?q=%s&tbm=isch',
+		'gl':'http://www.google.com/search?q=%s&hl='+localelang,
+		'git':'http://www.google.com/search?q=%s&hl=it',
+		'gfr':'http://www.google.com/search?q=%s&hl=fr',
+		'ges':'http://www.google.com/search?q=%s&hl=es',
+		'yt':'http://www.youtube.com/results?search_query=%s',
+		'f':'https://www.facebook.com/search/more/?q=%s',
+		't':'https://twitter.com/search?q=%s',
+		'ebay': 'http://www.ebay.com/sch/i.html?_nkw=%s',
+		'w':'http://en.wikipedia.org/w/index.php?search=%s',
+		'wit':'http://it.wikipedia.org/w/index.php?search=%s',
+		'wfr':'http://fr.wikipedia.org/w/index.php?search=%s',
+		'wes':'http://es.wikipedia.org/w/index.php?search=%s',
+		'i':'http://www.google.com/search?q=%s&tbm=isch'
 	};
-	ret=arr[ss];
-	if(!ret) {ret=arr['#g'];}
+	var engin=ss.substr(1);
+	ret=arr[engin];
+	if(!ret) {ret=arr['g'];}
 	return ret;
 };
 function make_queryURL(searchengine,stringquery){
