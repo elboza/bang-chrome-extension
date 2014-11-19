@@ -11,7 +11,9 @@
 //    ]);
 //});
 
+// configuration ...
 var searchsigil='!';
+var defaultengine='g';
 
 // This event is fired with the user accepts the input in the omnibox.
 chrome.omnibox.onInputEntered.addListener(
@@ -60,7 +62,7 @@ function take_searchengine(ss){
 	};
 	var engin=ss.substr(1);
 	ret=arr[engin];
-	if(!ret) {ret=arr['g'];}
+	if(!ret) {ret=arr[defaultengine];}
 	return ret;
 };
 function make_queryURL(searchengine,stringquery){
