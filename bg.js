@@ -55,6 +55,7 @@ function take_searchengine(ss){
 		'wit':'http://it.wikipedia.org/w/index.php?search=%s',
 		'wfr':'http://fr.wikipedia.org/w/index.php?search=%s',
 		'wes':'http://es.wikipedia.org/w/index.php?search=%s',
+		'dd':'http://duckduckgo.com/?q=%s',
 		'i':'http://www.google.com/search?q=%s&tbm=isch'
 	};
 	var engin=ss.substr(1);
