@@ -30,7 +30,10 @@ function take_searchengine(ss){
 	var arr={
 		'#g':'http://www.google.com/search?q=%s',
 		'#w':'http://www.amazon.com/exec/obidos/external-search/?field-keywords=%s&mode=blended',
-		'#b':'https://www.bing.com/search?setmkt=it-IT&q=%s'
+		'#b':'https://www.bing.com/search?setmkt=it-IT&q=%s',
+		'#gi':'http://www.google.com/search?q=%s&tbm=isch',
+		'#gl':'http://www.google.com/search?q=%s&hl=it',
+		'#i':'http://www.google.com/search?q=%s&tbm=isch'
 	};
 	ret=arr[ss];
 	if(!ret) {ret=arr['#g'];}
