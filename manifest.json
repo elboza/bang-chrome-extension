@@ -10,6 +10,7 @@
 	"background":{
 		"scripts":["bg.js"]
 	},
-	"omnibox":{"keyword":"#!"},
+	"icons":{ "256": "icon.png"},
+	"omnibox":{"keyword":"!"},
 	"manifest_version": 2
 }
