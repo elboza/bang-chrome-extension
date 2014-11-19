@@ -16,13 +16,16 @@ chrome.omnibox.onInputChanged.addListener(
 // This event is fired with the user accepts the input in the omnibox.
 chrome.omnibox.onInputEntered.addListener(
   function(text) {
-  	var res=text.split(" ",2);
-  	var searchengine=res[0];
-  	var stringquery=res[1];
+  	var res=text.split(" ");
+  	var searchengine=res.shift();
+  	if(searchengine.charAt(0)!='#') {res.unshift(searchengine);searchengine="null";}
+  	var stringquery=res.join("%20");
+  	//alert(searchengine+' '+stringquery);
     //console.log('search engine: ' + searchengine+ ' string query: '+stringquery);
     //alert('search engine: ' + searchengine+ ' string query: '+stringquery+take_searchengine(searchengine));
     //alert(make_queryURL(take_searchengine(searchengine),stringquery));
     var queryURL=make_queryURL(take_searchengine(searchengine),stringquery);
+    //alert(queryURL);
     navigate(queryURL);
   });
 function take_searchengine(ss){
@@ -34,6 +37,9 @@ function take_searchengine(ss){
 		'#gi':'http://www.google.com/search?q=%s&tbm=isch',
 		'#gl':'http://www.google.com/search?q=%s&hl=it',
 		'#yt':'http://www.youtube.com/results?search_query=%s',
+		'#f':'https://www.facebook.com/search/more/?q=%s',
+		'#t':'https://twitter.com/search?q=%s',
+		'#ebay': 'http://www.ebay.com/sch/i.html?_nkw=%s',
 		'#i':'http://www.google.com/search?q=%s&tbm=isch'
 	};
 	ret=arr[ss];
