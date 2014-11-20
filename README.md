@@ -71,7 +71,8 @@ since chrome extentions only allows one keyword, the activation keyword is:
     
 ##author
 
-Fernando Iazeolla (c)<br>
+Fernando Iazeolla (c)
+
 2014
 
 ##licence
