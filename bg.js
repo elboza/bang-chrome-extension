@@ -1,4 +1,7 @@
 // !bang background
+// author: Fernando Iazeolla
+// license: GPLv2
+
 
 // This event is fired each time the user updates the text in the omnibox,
 // as long as the extension's keyword mode is still active.
@@ -88,3 +91,9 @@ function navigate(url) {
     chrome.tabs.update(tabs[0].id, {url: url});
   });
 };
+
+window.addEventListener('click',function(e){
+  if(e.target.href!==undefined){
+    chrome.tabs.create({url:e.target.href})
+  }
+});
