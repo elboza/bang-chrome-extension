@@ -2,22 +2,34 @@
 
 // This event is fired each time the user updates the text in the omnibox,
 // as long as the extension's keyword mode is still active.
-//chrome.omnibox.onInputChanged.addListener(
-//  function(text, suggest) {
-//    console.log('inputChanged: ' + text);
-//    suggest([
-//      {content: text + " one", description: "the first one"},
-//      {content: text + " number two", description: "the second entry"}
-//    ]);
-//});
+chrome.omnibox.onInputChanged.addListener(
+  function(text, suggest) {
+    console.log('inputChanged: ' + text);
+    suggest([
+      {content: ">http://www.autistici.org/0xFE/!bang/", description: "goto !bang web site"},
+      {content: ">http://www.autistici.org/0xFE/!bang/man.php", description: "goto !bang online documentation"}
+    ]);
+});
+
+//chrome.omnibox.onInputStarted.addListener(
+//	function(){
+//		console.log('inputStarted: ');
+//    	//add web site sugestion
+//	}
+//);
 
 // configuration ...
 var searchsigil='!';
 var defaultengine='g';
+var gosigil='>';
 
 // This event is fired with the user accepts the input in the omnibox.
 chrome.omnibox.onInputEntered.addListener(
   function(text) {
+  	if(text.charAt(0)==gosigil){
+  		navigate(text.substr(1));
+  		return;	
+  	}
   	var res=text.split(" ");
   	var searchengine=res.shift();
   	if(searchengine.charAt(0)!=searchsigil) {res.unshift(searchengine);searchengine="null";}
