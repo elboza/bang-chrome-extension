@@ -16,6 +16,7 @@ body{
 .sectiontitle{
 	font-size:18px;
 	color: orange;
+	margin-top:5px;
 }
 
 .paragraph{
@@ -32,3 +33,33 @@ body{
 	font-style:italic;
 	font-size:9px;
 }
+
+.command{
+	font-weight:bold;
+	font-size:18px;
+}
+.comment{
+	font-weight:normal;
+	font-size: 9px;
+	font-style:italic;
+}
+.code{
+	background:#f8f8f8;
+	border: 1px dashed;
+	padding-left:5px;
+	padding right:5px;	
+}
+
+table{
+    border: 1px solid black;
+}
+td{
+	padding-left:5px;	
+	padding-right:5px;
+	margin:1px;
+}
+.titletable{
+	background:orange;	
+}
+
+
