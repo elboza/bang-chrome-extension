@@ -10,166 +10,54 @@ since chrome extentions only allows one keyword, the activation keyword is:
 
 ##command table	
 
-<table>
-<tr>
-<td class="titletable">command</td>
-<td class="titletable">query</td>
-</tr>
-<tr>
-<td>!g</td>
-<td>query www.google.com</td>
-</tr>
-<tr>
-<td>!a</td>
-<td>query www.amazon.com</td>
-</tr>
-<tr>
-<td>!ait</td>
-<td>query www.amazon.it</td>
-</tr>
-<tr>
-<td>!afr</td>
-<td>query www.amazon.fr</td>
-</tr>
-<tr>
-<td>!aes</td>
-<td>query www.amazon.es</td>
-</tr>
-<tr>
-<td>!auk</td>
-<td>query www.amazon.co.uk</td>
-</tr>
-<tr>
-<td>!b</td>
-<td>query www.bing.com</td>
-</tr>
-<tr>
-<td>!bit</td>
-<td>query www.bing.com with IT lang</td>
-</tr>
-<tr>
-<td>!bfr</td>
-<td>query www.bing.com with FR lang</td>
-</tr>
-<tr>
-<td>!bes</td>
-<td>query www.bing.com with ES lang</td>
-</tr><tr>
-<td>!bl</td>
-<td>query www.bing.com with browser's local lang setting</td>
-</tr>
-<tr>
-<td>!gi</td>
-<td>google images</td>
-</tr>
-<tr>
-<td>!gl</td>
-<td>google with browser's local lang setting</td>
-</tr>
-<tr>
-<td>!git</td>
-<td>google with IT lang</td>
-</tr>
-<tr>
-<td>!gfr</td>
-<td>google with FR lang</td>
-</tr>
-<tr>
-<td>!ges</td>
-<td>google with ES lang</td>
-</tr>
-<tr>
-<td>!yt</td>
-<td>www.youtube.com</td>
-</tr>
-<tr>
-<td>!f</td>
-<td>www.facebook.com</td>
-</tr>
-<tr>
-<td>!t</td>
-<td>www.twitter.com</td>
-</tr>
-<tr>
-<td>!ebay</td>
-<td>www.ebay.com</td>
-</tr>
-<tr>
-<td>!w</td>
-<td>en.wikipedia.org</td>
-</tr>
-<tr>
-<td>!wit</td>
-<td>it.wikipedia.org</td>
-</tr>
-<tr>
-<td>!wfr</td>
-<td>fr.wikipedia.org</td>
-</tr>
-<tr>
-<td>!wes</td>
-<td>es.wikipedia.org</td>
-</tr>
-<tr>
-<td>!dd</td>
-<td>www.duckduckgo.com</td>
-</tr>
-<tr>
-<td>!i</td>
-<td>google images</td>
-</tr>
-</table>
-</div>
+| command | query                                         |
+|---------|-----------------------------------------------|
+| !g      | www.google.com                                |
+| !a      | www.amazon.com                                |
+| !ait    | www.amazon.it                                 |
+| !afr    | www.amazon.fr                                 |
+| !aes    | www.amazon.es                                 |
+| !auk    | www.amazon.co.uk                              |
+| !b      | www.bing.com                                  |
+| !bit    | www.bing.com with IT lang                     |
+| !bfr    | www.bing.com with FR lang                     |
+| !bes    | www.bing.com with ES lang                     |
+| !bl     | www.bing.com with browser's local lang setting|
+| !gi     | google images                                 |
+| !gl     | google with browser's local lang setting      |
+| !git    | google with IT lang                           |
+| !gfr    | google with FR lang                           |
+| !ges    | google with ES lang                           |
+| !yt     | www.youtube.com                               |
+| !f      | www.facebook.com                              |
+| !t      | www.twitter.com                               |
+| !ebay   | www.ebay.com                                  |
+| !w      | en.wikipedia.org                              |
+| !wit    | it.wikipedia.org                              |
+| !wfr    | fr.wikipedia.org                              |
+| !wes    | es.wikipedia.org                              |
+| !dd     | www.duckduckgo.com                            |
+| !i      | google images                                 |
 
 ##command syntax logic
-<div class="partagraph">
-<table>
-<tr>
-<td class="titletable">prefix</td>
-<td class="titletable">description</td>
-</tr>
-<tr>
-<td>!</td>
-<td>the search command</td>
-</tr>
-<tr>
-<td class="titletable">root</td>
-<td class="titletable">description</td>
-</tr>
-<tr>
-<td>g</td>
-<td>query www.google.com</td>
-</tr>
-<tr>
-<td>a</td>
-<td>query www.amazon.com</td>
-</tr>
-<tr>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr>
-<td class="titletable">suffix</td>
-<td class="titletable">description</td>
-</tr>
-<tr>
-<td>it</td>
-<td>italian language</td>
-</tr>
-<tr>
-<td>fr</td>
-<td>french language</td>
-</tr>
-<tr>
-<td>l</td>
-<td>browser's local lang setting</td>
-</tr>
-<tr>
-<td>...</td>
-<td>...</td>
-</tr>
-</table>
-</div>
+
+| prefix | description          |
+|--------|----------------------|
+| !      | the search command   |
+
+| root   | description          |
+|--------|----------------------|
+| g      | query www.google.com |
+| a      | query www.amazon.com |
+| ...    | ...                  |
+
+| suffix | description                  |
+|--------|------------------------------|
+| it     | italian language             |
+| fr     | french language              |
+| l      | browser's local lang setting |
+| ...    | ...                          |
+
 
 ##examples
 
