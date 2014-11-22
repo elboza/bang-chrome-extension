@@ -38,6 +38,10 @@ since chrome extentions only allows one keyword, the activation keyword is:
 | !wes    | es.wikipedia.org                              |
 | !dd     | www.duckduckgo.com                            |
 | !i      | google images                                 |
+| !y      | yahoo.com                                     |
+| !yit    | yahoo with IT lang                            |
+| !yfr    | yahoo with FR lang                            |
+| !yes    | yahoo with ES lang                            |
 
 ##command syntax logic
 
