@@ -74,6 +74,10 @@ function take_searchengine(ss){
 		'wfr':'http://fr.wikipedia.org/w/index.php?search=%s',
 		'wes':'http://es.wikipedia.org/w/index.php?search=%s',
 		'dd':'http://duckduckgo.com/?q=%s',
+		'y':'http://search.yahoo.com/search?p=%s',
+		'yit':'http://it.search.yahoo.com/search?p=%s',
+		'yfr':'http://fr.search.yahoo.com/search?p=%s',
+		'yes':'http://es.search.yahoo.com/search?p=%s',
 		'i':'http://www.google.com/search?q=%s&tbm=isch'
 	};
 	var engin=ss.substr(1);
