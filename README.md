@@ -19,6 +19,7 @@ since chrome extentions only allows one keyword, the activation keyword is:
 | !aes    | www.amazon.es                                 |
 | !auk    | www.amazon.co.uk                              |
 | !b      | www.bing.com                                  |
+| !bi     | bing images                                   |
 | !bit    | www.bing.com with IT lang                     |
 | !bfr    | www.bing.com with FR lang                     |
 | !bes    | www.bing.com with ES lang                     |
@@ -39,6 +40,7 @@ since chrome extentions only allows one keyword, the activation keyword is:
 | !dd     | www.duckduckgo.com                            |
 | !i      | google images                                 |
 | !y      | yahoo.com                                     |
+| !yi     | yahoo images                                  |
 | !yit    | yahoo with IT lang                            |
 | !yfr    | yahoo with FR lang                            |
 | !yes    | yahoo with ES lang                            |
@@ -60,6 +62,7 @@ since chrome extentions only allows one keyword, the activation keyword is:
 | it     | italian language             |
 | fr     | french language              |
 | l      | browser's local lang setting |
+| i      | images                       |
 | ...    | ...                          |
 
 
