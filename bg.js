@@ -62,6 +62,7 @@ function take_searchengine(ss){
 		'bfr':'https://www.bing.com/search?setmkt=fr-FR&q=%s',
 		'bes':'https://www.bing.com/search?setmkt=es-ES&q=%s',
 		'gi':'http://www.google.com/search?q=%s&tbm=isch',
+		'gm':'http://www.google.com/maps/search/%s',
 		'gl':'http://www.google.com/search?q=%s&hl='+localelang,
 		'git':'http://www.google.com/search?q=%s&hl=it',
 		'gfr':'http://www.google.com/search?q=%s&hl=fr',

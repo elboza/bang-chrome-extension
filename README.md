@@ -25,6 +25,7 @@ since chrome extentions only allows one keyword, the activation keyword is:
 | !bes    | www.bing.com with ES lang                     |
 | !bl     | www.bing.com with browser's local lang setting|
 | !gi     | google images                                 |
+| !gm     | google maps search                                 |
 | !gl     | google with browser's local lang setting      |
 | !git    | google with IT lang                           |
 | !gfr    | google with FR lang                           |
