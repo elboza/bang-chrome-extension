@@ -82,7 +82,7 @@ function take_searchengine(ss){
 		'yfr':'http://fr.search.yahoo.com/search?p=%s',
 		'yes':'http://es.search.yahoo.com/search?p=%s',
 		'i':'http://www.google.com/search?q=%s&tbm=isch',
-        'so': 'http://stackoverflow.com/search?q=%s'
+		'so': 'http://stackoverflow.com/search?q=%s'
 	};
 	var engin=ss.substr(1);
 	ret=arr[engin];
