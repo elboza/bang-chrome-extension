@@ -45,6 +45,7 @@ since chrome extentions only allows one keyword, the activation keyword is:
 | !yit    | yahoo with IT lang                            |
 | !yfr    | yahoo with FR lang                            |
 | !yes    | yahoo with ES lang                            |
+| !so     | stack overflow                                |
 
 ##command syntax logic
 
