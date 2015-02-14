@@ -1,4 +1,4 @@
-#!bang v0.1 
+#!bang v0.2 
 
 !bang is a fast and geeky search engine selector.
 	
